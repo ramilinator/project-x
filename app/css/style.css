@@ -1,0 +1,70 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  transition: padding-top .5s ease; }
+
+.landing-page {
+  width: 100%;
+  background-color: #e1dbc4;
+  text-align: center;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  display: block;
+  transition: all .3s ease; }
+  .landing-page.disabled {
+    display: none; }
+  .landing-page h1 {
+    font-size: 60px;
+    color: #666;
+    line-height: 230px;
+    text-transform: uppercase;
+    font-weight: 100;
+    transition: all .3s ease; }
+
+h2 {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 2;
+  color: #2c3e50; }
+
+p {
+  margin-bottom: 2rem;
+  line-height: 2;
+  color: #7f8c8d; }
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto; }
+
+section {
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+
+.main-nav {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  background-color: #cac5ab; }
+  .main-nav a {
+    color: #666;
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: 1;
+    text-decoration: none; }
+    .main-nav a:hover {
+      box-shadow: 0 0 0 1px #fff; }
+
+/* Sticky Header Style */
+/* ---------------------------------------- */
+body.sticky-nav .main-nav {
+  height: 60px;
+  position: fixed;
+  top: 0; }
+
+body.sticky-nav .wrapper {
+  padding-top: 60px; }
