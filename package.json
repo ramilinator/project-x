@@ -1,7 +1,6 @@
 {
-  "name": "project",
+  "name": "fairytale",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +21,18 @@
     "gulp-uglify": "^1.2.0",
     "gulp-useref": "^3.0.4",
     "run-sequence": "^1.1.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramilinator/project-x.git"
+  },
+  "keywords": [
+    "ramil"
+  ],
+  "bugs": {
+    "url": "https://github.com/ramilinator/project-x/issues"
+  },
+  "homepage": "https://github.com/ramilinator/project-x#readme",
+  "description": ""
 }
