@@ -1,17 +1,26 @@
-
-var viewPort = $(window).height();
+var viewPortHeight = $(window).innerHeight();
+var viewPortWidth = $(window).innerWidth();
 var stickyNav = 60;
-var stickyNavActivate = viewPort - stickyNav;
+var mobile = 600;
+var viewPortMobile = viewPortHeight;
+var viewPortDesktop = viewPortHeight - stickyNav;
+
 
 $(document).ready(function() {
-	
-	$(".landing-page").css('height', stickyNavActivate);
- 
-  	$(window).scroll(function() { 
+  	$(window).on( "load", function() { 
+
+    if (viewPortWidth <= mobile){
+     $(".landing-page").css('height', viewPortMobile);
+    } 
+    else {
+     $(".landing-page").css('height', viewPortDesktop);
+    }
+  });
+  $(window).scroll(function() { 
 
     var winTop = $(window).scrollTop();
 
-    if (winTop >= stickyNavActivate){
+    if (winTop >= viewPortDesktop){
       $("body").addClass("sticky-nav");
     } 
     else {
@@ -19,4 +28,6 @@ $(document).ready(function() {
     }
   })
 })
+
+
 
