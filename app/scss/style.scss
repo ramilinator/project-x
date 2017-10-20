@@ -1,3 +1,12 @@
+@import 'menu';
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
 
 body{
 	background-color: #ecf0f2;
@@ -21,10 +30,13 @@ body{
 	h1{
 		font-size: 60px;
 		color: #666;
-		line-height: 230px;
 		text-transform: uppercase;
 		font-weight: 100;
 		transition: all .3s ease;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
 h2{
@@ -40,7 +52,7 @@ p{
 	color: #7f8c8d;
 }
 .wrapper {
-	width: 800px;
+	// width: 800px;
 	margin: 0 auto;
 }
 section {
@@ -51,22 +63,12 @@ section {
 }
 
 
-.main-nav{
-	position: relative;
-	height: 60px;
-	line-height: 60px;
-	width: 100%;
-	background-color: #cac5ab;
-		a{
-			color: #666;
-			display: inline-block;
-			padding: 10px 15px;
-			line-height: 1;
-			text-decoration: none;
-		&:hover{
-		  box-shadow: 0 0 0 1px #fff;
-		}
-	}
+.hide {
+	display: none;
+}
+
+.removePad {
+	padding: 0 !important; 
 }
 
 /* Sticky Header Style */	
@@ -81,3 +83,25 @@ body.sticky-nav {
 		padding-top: 60px;
 	}
 }
+
+	.menu {
+	  position: relative;
+	  height: 60px;
+	  line-height: 60px;
+	  width: 100%;
+	  background-color: #cac5ab;
+	    a{
+	      color: #666;
+	      display: inline-block;
+	      padding: 10px 15px;
+	      line-height: 1;
+	      text-decoration: none;
+	    &:hover{
+	      box-shadow: 0 0 0 1px #fff;
+	    }
+	  }
+	  .menu-link {
+	  	display: none;
+	  }
+	}
+
