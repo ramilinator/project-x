@@ -7,7 +7,6 @@ var viewPortDesktop = viewPortHeight - stickyNav;
 
 
 $(document).ready(function() {
-  	$(window).on( 'load' , function() { 
 
     if (viewPortWidth <= mobile){
      $('.landing-page').css('height', viewPortMobile);
@@ -16,7 +15,7 @@ $(document).ready(function() {
      $('.landing-page').css('height', viewPortDesktop);
   
     }
-  });
+
   $(window).scroll(function() { 
 
     var winTop = $(window).scrollTop();
@@ -31,6 +30,7 @@ $(document).ready(function() {
   $(".menu-link").click(function(e) {
     e.preventDefault();
     $(".menu").toggleClass("open");
+    $(".dimmer").toggleClass("active");
   });
 })
 
