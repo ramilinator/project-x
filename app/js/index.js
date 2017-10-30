@@ -5,34 +5,39 @@ var mobile = 1024;
 var viewPortMobile = viewPortHeight;
 var viewPortDesktop = viewPortHeight - stickyNav;
 
+ 
+$(document).ready(function() { 
 
-$(document).ready(function() {
+  if (viewPortWidth <= mobile){
+   $('.landing-page').css('height', viewPortMobile);
+ } 
+ else {
+   $('.landing-page').css('height', viewPortDesktop);
+   
+ }
 
-    if (viewPortWidth <= mobile){
-     $('.landing-page').css('height', viewPortMobile);
-    } 
-    else {
-     $('.landing-page').css('height', viewPortDesktop);
-  
-    }
+ $(window).scroll(function() { 
 
-  $(window).scroll(function() { 
+  var winTop = $(window).scrollTop();
 
-    var winTop = $(window).scrollTop();
-
+  if (viewPortWidth > mobile) {
     if (winTop >= viewPortDesktop){
-      $("body").addClass("sticky-nav");
-    } 
-    else {
-      $("body").removeClass("sticky-nav");
+      $(".main-nav").addClass("sticky-nav");
+      $(".wrapper").addClass("addPad");
+    } else {
+      $(".main-nav").removeClass("sticky-nav");
+      $(".wrapper").removeClass("addPad");
     }
-  })
-  $(".menu-link").click(function(e) {
-    e.preventDefault();
-    $(".menu").toggleClass("open");
-    $(".dimmer").toggleClass("active");
-  });
+  } 
 })
+
+ $(".menu-link").click(function(e) {
+  e.preventDefault();
+  $(".menu").toggleClass("open");
+  $(".dimmer").toggleClass("active");
+});
+
+});
 
 
 
