@@ -67,41 +67,43 @@ section {
 	display: none;
 }
 
+.addPad {
+	padding-top: 60px;
+}
+
 .removePad {
 	padding: 0 !important; 
 }
 
 /* Sticky Header Style */	
 /* ---------------------------------------- */ 
-body.sticky-nav {
-	.main-nav {
-		height: 60px;
-		position: fixed;
-		top: 0;
+
+
+.menu {
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	background-color: #cac5ab;
+	a{
+		color: #666;
+		display: inline-block;
+		padding: 10px 15px;
+		line-height: 1;
+		text-decoration: none;
+		&:hover{
+			box-shadow: 0 0 0 1px #fff;
+		}
 	}
-	.wrapper {
-		padding-top: 60px;
+	&.main-nav {
+		&.sticky-nav {
+			height: 60px;
+			position: fixed;
+			top: 0;
+		}
+	} 
+	.menu-link {
+		display: none;
 	}
 }
-
-	.menu {
-	  position: relative;
-	  height: 60px;
-	  line-height: 60px;
-	  width: 100%;
-	  background-color: #cac5ab;
-	    a{
-	      color: #666;
-	      display: inline-block;
-	      padding: 10px 15px;
-	      line-height: 1;
-	      text-decoration: none;
-	    &:hover{
-	      box-shadow: 0 0 0 1px #fff;
-	    }
-	  }
-	  .menu-link {
-	  	display: none;
-	  }
-	}
 
